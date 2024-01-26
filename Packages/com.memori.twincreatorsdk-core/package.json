@@ -1,0 +1,20 @@
+{
+  "name": "com.memori.twincreatorsdk-core",
+  "version": "0.0.1",
+  "displayName": "TwinCreator SDK - Core",
+  "description": "API to connect with the TwinCreator servers",
+  "unity": "2019.1",
+  "keywords": [
+    "ai",
+    "chatbot",
+    "npc"
+  ],
+  "author": {
+    "name": "Memori SRL",
+    "email": "nunzio.fiore@memori.ai",
+    "url": "https://twincreator.com/it"
+  },
+  "dependencies": {
+  },
+  "unityRelease": "1f1"
+}

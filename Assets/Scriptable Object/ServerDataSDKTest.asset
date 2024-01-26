@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8ced55e092c174ba7981e7cb0c695b, type: 3}
+  m_Name: ServerDataSDKTest
+  m_EditorClassIdentifier: 
+  userName: daniele.monaco
+  ownerID: b547b7dc-50dc-47c6-a45e-005f5a75b2c4
+  tenantName: app.twincreator.com
+  passwordMemori: 
+  MemoriNameURL: https://backend.memori.ai/api/v2/Memori
+  MemoriIDURL: https://backend.memori.ai/api/v2/MemoriByID
+  SessionURL: https://engine.memori.ai/memori/v2/Session
+  DialogueURL: https://engine.memori.ai/memori/v2/TextEnteredEvent/
+  TranslateURL: https://app.memorytwin.com/api/translate
+  MediaURL: https://app.memorytwin.com/api/media
+  MemoriesURL: https://engine.memori.ai/memori/v2/Memories/
+  MetaverseGetSpaceURL: https://metaverse.memori.ai/api/v1/spaces/
+  MetaverseURLCreator: https://backend.memori.ai/api/v2/TenantMetaverseMemori/app.twincreator.com
+  MetaverseURLTwin: https://backend.memori.ai/api/v2/TenantMetaverseMemori/app.memorytwin.com
+  sizeInventory: 10
+  KeyAzure: b90f8a7a11af4604891b0272ebb5fa65
+  RegionAzure: westeurope
