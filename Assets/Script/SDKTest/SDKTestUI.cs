@@ -28,6 +28,7 @@ public class SDKTestUI : MonoBehaviour
     public List<ConversiationUIItem> Items;
     public string[] Cultures;
     private string currentTalkingString = "Parla";
+    private bool thinking;
     
     private void OnGUI()
     {
@@ -44,7 +45,7 @@ public class SDKTestUI : MonoBehaviour
                 Screen.width * 0.5f - UiWidth * 0.5f,
                 40f,
                 UiWidth * 0.5f,
-                TextBoxHeight), "Talking...");
+                TextBoxHeight), thinking ? "Thinking.." : "Talking...");
         }
         // top right: language combobox, open or close conversation
         GUI.skin.label.alignment = TextAnchor.UpperRight;
@@ -123,6 +124,7 @@ public class SDKTestUI : MonoBehaviour
                     TalkButtonWidth,
                     TextBoxHeight), "Invia"))
             {
+                thinking = true;
                 Sdk.SendRequest(currentTalkingString);
                 Items.Insert(0, new ConversiationUIItem()
                 {
@@ -143,7 +145,7 @@ public class SDKTestUI : MonoBehaviour
             IsFromTwin = true,
             Type = ConversiationUIItem.ContentType.Message
         });
-        
+        thinking = false;
     }
     
     public void AddTwinMedia(string url)

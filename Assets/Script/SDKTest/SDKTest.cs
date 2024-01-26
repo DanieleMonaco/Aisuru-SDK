@@ -71,7 +71,7 @@ public class SDKTest : MonoBehaviour
         });
     }
 
-    public void OpenSession(string initialQuestion)
+    public void OpenSession(string initialQuestion, Dictionary<string, string> context = null)
     {
         MemoriAPI.PostMemoriID postMemori = new MemoriAPI.PostMemoriID()
         {
@@ -81,6 +81,11 @@ public class SDKTest : MonoBehaviour
             strUserID = ServerData.ownerID
         };
 
+        if(context == null)
+        {
+            context = new Dictionary<string, string> { };
+        }
+
         MemoriApi.GetMemori(postMemori, twin =>
         {
            currentMemori = twin;
@@ -89,7 +94,8 @@ public class SDKTest : MonoBehaviour
                memoriID = TwinDesc.IDEngineMemori,
                password = TwinDesc.PasswordMemori,
                birthDate = new DateTime(2001, 1, 1),
-               initialQuestion = initialQuestion
+               initialQuestion = initialQuestion,
+               initialContextVars = context
            };
 
            if (Language != currentMemori.memori.culture)
